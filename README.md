@@ -4,29 +4,37 @@ This project showcases a basic webpage with frontend techonology (React). It inc
 
 ## Getting Started
 
-#### Installing Dependecies
+### Installing Dependecies
 
-##### Installing Node and NPM
+#### Installing Node and NPM
 
 This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from [https://nodejs.com/en/download](https://nodejs.org/en/download/).
 
-#### Clone project
+### Clone project
 
-> Run: git clone https://github.com/Ginohmk/Zuri-HNG-Task1.git
+In the project directory,in your terminal, you can run:
 
-> Run: cd Zuri-HNG-Task1
+```cmd
+ Run: git clone https://github.com/Ginohmk/Zuri-HNG-Task1.git
+```
 
-> npm i
+```cmd
+ Run: cd Zuri-HNG-Task1
+```
 
+```cmd
+ npm i
+
+```
+
+<br>
 In the project directory, you can run:
 
 #### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes. You may also see any lint errors in the console.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
 👤 **Kanu Mike**
 
