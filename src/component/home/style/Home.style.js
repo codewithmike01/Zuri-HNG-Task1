@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ProfilePic from '../../../assests/images/profile-img.png';
 
 export const HomeContainer = styled.div`
   width: 90%;
@@ -10,6 +11,7 @@ export const HomeContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 56px;
+    position: relative;
 
     .content::after {
       content: 'hello';
@@ -21,6 +23,53 @@ export const HomeContainer = styled.div`
       flex-direction: column;
       align-items: center;
       gap: 24px;
+      position: relative;
+
+      .img-container {
+        position: relative;
+        cursor: pointer;
+        width: 88px;
+        height: 88px;
+        background: url(${ProfilePic});
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        image-rendering: pixelated;
+
+        .icon {
+          opacity: 0;
+          position: absolute;
+          left: 30px;
+          top: 55px;
+        }
+
+        &:hover {
+          background: linear-gradient(
+              0deg,
+              rgba(52, 64, 84, 0.75),
+              rgba(52, 64, 84, 0.75)
+            ),
+            url(${ProfilePic});
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          .icon {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+          }
+        }
+
+        &:focus {
+          border: 5.5px solid #ebe9fe;
+          background: url(${ProfilePic});
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 50%;
+          image-rendering: pixelated;
+        }
+      }
       p {
         font-weight: 700;
         font-size: 1.25rem;
@@ -30,13 +79,25 @@ export const HomeContainer = styled.div`
       }
     }
 
-    .desktop-share {
-      display: none;
+    .img-container {
+      position: relative;
+      .desktop-share {
+        display: none;
+      }
+
+      .desktop-share,
+      .mobile-share {
+        align-self: flex-start;
+        cursor: pointer;
+      }
     }
 
-    img {
-      align-self: flex-start;
-      cursor: pointer;
+    /* ToolTip */
+    span {
+      display: none;
+      position: absolute;
+      right: 30px;
+      top: 5px;
     }
   }
 
@@ -57,6 +118,24 @@ export const HomeContainer = styled.div`
       background: #eaecf0;
       border: 1px solid #eaecf0;
       border-radius: 8px;
+      &:hover {
+        background: #d0d5dd;
+        border: 1px solid #d0d5dd;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+      }
+      &:focus {
+        background: #eaecf0;
+        border: 1px solid #98a2b3;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #ebe9fe;
+        border-radius: 8px;
+      }
+      &:disabled {
+        background: #fcfcfd;
+        border: 1px solid #f2f4f7;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+      }
     }
   }
 
@@ -90,16 +169,26 @@ export const HomeContainer = styled.div`
 
   @media screen and (min-width: 990px) {
     .profile-containter {
-      width: 80%;
+      width: 70%;
       margin: 0 auto;
       margin-bottom: 56px;
+      .img-container {
+        .mobile-share {
+          display: none;
+        }
 
-      .mobile-share {
-        display: none;
+        .desktop-share {
+          display: flex;
+        }
       }
 
-      .desktop-share {
+      span {
         display: flex;
+        opacity: ${({ toolTip }) => (toolTip ? '1' : '0')};
+        position: absolute;
+        right: 30px;
+        top: 5px;
+        transition: opacity 0.5s ease-in-out;
       }
     }
   }

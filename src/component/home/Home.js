@@ -1,32 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HomeContainer } from './style/Home.style';
 import Slack from '../../assests/images/slack.svg';
 import Github from '../../assests/images/github.svg';
 import ZuriLogo from '../../assests/images/zuri-logo.svg';
 import IngressiveLogo from '../../assests/images/ingressive-logo.svg';
-import ProfilePic from '../../assests/images/profile-img.svg';
 import MobileShare from '../../assests/images/mobile-share-button.svg';
 import DesktopShare from '../../assests/images/share-button.svg';
+import ToolTip from '../../assests/images/Tooltip.svg';
+import Camera from '../../assests/images/camera.svg';
 
 const Home = () => {
+  const [showToolTip, setShowToolTip] = useState(false);
+  const [showCamera, setShowCamera] = useState(false);
+
   return (
-    <HomeContainer>
+    <HomeContainer toolTip={showToolTip} camera={showCamera}>
       <div className="profile-containter">
         <div className="content"></div>
         <div className="profile-details">
-          <div>
-            <img src={ProfilePic} alt="Profile pic" />
+          <div
+            className="img-container"
+            typeof="button"
+            onMouseEnter={() => setShowCamera(true)}
+            onMouseLeave={() => setShowCamera(false)}
+          >
+            <img src={Camera} alt="Camera icon" className="icon" />
           </div>
           <p>Kanu Mike</p>
         </div>
 
-        <img src={MobileShare} alt="Share icon" className="mobile-share" />
+        <span>
+          <img src={ToolTip} alt="Share Tool tip" />{' '}
+        </span>
 
-        <img
-          src={DesktopShare}
-          alt="Desktop Share icon"
-          className="desktop-share"
-        />
+        <div className="img-container">
+          <img src={MobileShare} alt="Share icon" className="mobile-share" />
+
+          <img
+            src={DesktopShare}
+            alt="Desktop Share icon"
+            className="desktop-share"
+            typeof="button"
+            onMouseEnter={() => setShowToolTip(true)}
+            onMouseLeave={() => setShowToolTip(false)}
+          />
+        </div>
       </div>
       <div className="links">
         <a href="none" target="_blank">
