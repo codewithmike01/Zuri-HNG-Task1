@@ -28,9 +28,26 @@ export const HomeContainer = styled.div`
 
   .social-links {
     margin-top: 24px;
+    margin-bottom: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 26.25px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: column wrap;
+    img {
+      width: 132.13px;
+      height: 32px;
+    }
+    p {
+      font-size: 0.7rem;
+      line-height: 24px;
+      color: #667085;
+    }
   }
 `;

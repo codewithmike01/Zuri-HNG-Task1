@@ -2,6 +2,8 @@ import React from 'react';
 import { HomeContainer } from './style/Home.style';
 import Slack from '../../assests/images/slack.svg';
 import Github from '../../assests/images/github.svg';
+import ZuriLogo from '../../assests/images/zuri-logo.svg';
+import IngressiveLogo from '../../assests/images/ingressive-logo.svg';
 
 const Home = () => {
   return (
@@ -35,6 +37,12 @@ const Home = () => {
           <img src={Github} alt="Github logo" />
         </a>
       </div>
+      <hr />
+      <footer>
+        <img src={ZuriLogo} alt="Zuri logo" />
+        <p>HNG Intership 9 Frontend Task</p>
+        <img src={IngressiveLogo} alt="Ingressive logo" />
+      </footer>
     </HomeContainer>
   );
 };
