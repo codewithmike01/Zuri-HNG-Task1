@@ -24,10 +24,15 @@ const Home = () => {
             onMouseEnter={() => setShowCamera(true)}
             onMouseLeave={() => setShowCamera(false)}
             tabindex="0"
+            id="profile__img"
           >
             <img src={Camera} alt="Camera icon" className="icon" />
           </div>
-          <p>Kanu Mike</p>
+          <p id="twitter">Kanu Mike</p>
+          <p id="slack" hidden>
+            {' '}
+            kanu Mike
+          </p>
         </div>
 
         <span>
@@ -54,19 +59,44 @@ const Home = () => {
         <a href="none" target="_blank">
           Twitter Link
         </a>
-        <a href="none" target="_blank">
+        <a
+          href="https://training.zuri.team/"
+          rel="noopener noreferrer"
+          target="_ blank"
+          id="btn__zuri"
+        >
           Zuri Team
         </a>
-        <a href="none" target="_blank">
+        <a
+          href="http://books.zuri.team"
+          rel="noopener noreferrer"
+          target="_blank"
+          id="books"
+        >
           Zuri Books
         </a>
-        <a href="none" target="_blank">
+        <a
+          href="https://books.zuri.team/python-for-beginners?ref_id=<yourslackname>"
+          rel="noopener noreferrer"
+          target="_blank"
+          id="book__python"
+        >
           Python Books
         </a>
-        <a href="none" target="_blank">
+        <a
+          href="https://background.zuri.team"
+          rel="noopener noreferrer"
+          target="_blank"
+          id="pitch"
+        >
           Background Check for Coders
         </a>
-        <a href="none" target="_blank">
+        <a
+          href="https://books.zuri.team/design-rules "
+          rel="noopener noreferrer"
+          target="_blank"
+          id="book__design"
+        >
           Design Books
         </a>
       </div>
