@@ -23,6 +23,7 @@ const Home = () => {
             typeof="button"
             onMouseEnter={() => setShowCamera(true)}
             onMouseLeave={() => setShowCamera(false)}
+            tabindex="0"
           >
             <img src={Camera} alt="Camera icon" className="icon" />
           </div>
@@ -33,16 +34,19 @@ const Home = () => {
           <img src={ToolTip} alt="Share Tool tip" />{' '}
         </span>
 
-        <div className="img-container">
+        <div
+          className="img-container"
+          typeof="button"
+          onMouseEnter={() => setShowToolTip(true)}
+          onMouseLeave={() => setShowToolTip(false)}
+          tabindex="0"
+        >
           <img src={MobileShare} alt="Share icon" className="mobile-share" />
 
           <img
             src={DesktopShare}
             alt="Desktop Share icon"
             className="desktop-share"
-            typeof="button"
-            onMouseEnter={() => setShowToolTip(true)}
-            onMouseLeave={() => setShowToolTip(false)}
           />
         </div>
       </div>

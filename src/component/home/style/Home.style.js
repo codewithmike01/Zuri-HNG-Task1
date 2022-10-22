@@ -62,6 +62,7 @@ export const HomeContainer = styled.div`
         }
 
         &:focus {
+          outline: none;
           border: 5.5px solid #ebe9fe;
           background: url(${ProfilePic});
           background-repeat: no-repeat;
@@ -81,6 +82,13 @@ export const HomeContainer = styled.div`
 
     .img-container {
       position: relative;
+      width: 40px;
+      height: 40px;
+      background: ${({ toolTip }) => (toolTip ? '#F9FAFB' : '#fff')};
+      border: 1px dashed #d0d5dd;
+      border-radius: 20px;
+      cursor: pointer;
+
       .desktop-share {
         display: none;
       }
@@ -89,6 +97,28 @@ export const HomeContainer = styled.div`
       .mobile-share {
         align-self: flex-start;
         cursor: pointer;
+        position: absolute;
+        top: 3px;
+        left: 20px;
+        transform: translate(-50%, 50%);
+      }
+
+      .mobile-share {
+        top: 15px;
+      }
+
+      &:focus {
+        outline: none;
+        background: #ffffff;
+        border: 1px dashed #d0d5dd;
+        box-shadow: 0px 0px 0px 4px #f2f4f7;
+        border-radius: 20px;
+      }
+
+      &:disabled {
+        background: #f9fafb;
+        border: 1px dashed #eaecf0;
+        border-radius: 20px;
       }
     }
 
@@ -125,6 +155,7 @@ export const HomeContainer = styled.div`
         border-radius: 8px;
       }
       &:focus {
+        outline: none;
         background: #eaecf0;
         border: 1px solid #98a2b3;
         box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #ebe9fe;
