@@ -15,16 +15,15 @@ This project depends on Nodejs and Node Package Manager (NPM). Before continuing
 In the project directory,in your terminal, you can run:
 
 ```cmd
- Run: git clone https://github.com/Ginohmk/Zuri-HNG-Task1.git
+ git clone https://github.com/Ginohmk/Zuri-HNG-Task1.git
 ```
 
 ```cmd
- Run: cd Zuri-HNG-Task1
+  cd Zuri-HNG-Task1
 ```
 
 ```cmd
  npm i
-
 ```
 
 <br>
