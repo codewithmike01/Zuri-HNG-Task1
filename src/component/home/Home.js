@@ -4,10 +4,30 @@ import Slack from '../../assests/images/slack.svg';
 import Github from '../../assests/images/github.svg';
 import ZuriLogo from '../../assests/images/zuri-logo.svg';
 import IngressiveLogo from '../../assests/images/ingressive-logo.svg';
+import ProfilePic from '../../assests/images/profile-img.svg';
+import MobileShare from '../../assests/images/mobile-share-button.svg';
+import DesktopShare from '../../assests/images/share-button.svg';
 
 const Home = () => {
   return (
     <HomeContainer>
+      <div className="profile-containter">
+        <div className="content"></div>
+        <div className="profile-details">
+          <div>
+            <img src={ProfilePic} alt="Profile pic" />
+          </div>
+          <p>Kanu Mike</p>
+        </div>
+
+        <img src={MobileShare} alt="Share icon" className="mobile-share" />
+
+        <img
+          src={DesktopShare}
+          alt="Desktop Share icon"
+          className="desktop-share"
+        />
+      </div>
       <div className="links">
         <a href="none" target="_blank">
           Twitter Link
