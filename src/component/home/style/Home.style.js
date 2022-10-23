@@ -107,7 +107,7 @@ export const HomeContainer = styled.div`
       }
 
       .mobile-share {
-        top: 4px;
+        top: 2.7px;
         left: 19px;
       }
 
