@@ -34,6 +34,7 @@ export const HomeContainer = styled.div`
         background: url(${ProfilePic});
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
         border-radius: 50%;
 
         .icon {
@@ -53,8 +54,7 @@ export const HomeContainer = styled.div`
             url(${ProfilePic});
           background-repeat: no-repeat;
           background-size: cover;
-          background-repeat: no-repeat;
-          background-size: cover;
+          background-position: center center;
           border-radius: 50%;
 
           .icon {
@@ -69,8 +69,8 @@ export const HomeContainer = styled.div`
           background: url(${ProfilePic});
           background-repeat: no-repeat;
           background-size: cover;
+          background-position: center center;
           border-radius: 50%;
-          image-rendering: pixelated;
         }
       }
       p {
