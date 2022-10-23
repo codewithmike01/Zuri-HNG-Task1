@@ -26,6 +26,7 @@ export const HomeContainer = styled.div`
       position: relative;
 
       .img-container {
+        border: none;
         position: relative;
         cursor: pointer;
         width: 88px;
@@ -33,8 +34,8 @@ export const HomeContainer = styled.div`
         background: url(${ProfilePic});
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
         border-radius: 50%;
-        image-rendering: pixelated;
 
         .icon {
           opacity: 0;
@@ -44,6 +45,7 @@ export const HomeContainer = styled.div`
         }
 
         &:hover {
+          border: none;
           background: linear-gradient(
               0deg,
               rgba(52, 64, 84, 0.75),
@@ -52,8 +54,8 @@ export const HomeContainer = styled.div`
             url(${ProfilePic});
           background-repeat: no-repeat;
           background-size: cover;
-          background-repeat: no-repeat;
-          background-size: cover;
+          background-position: center center;
+          border-radius: 50%;
 
           .icon {
             opacity: 1;
@@ -67,8 +69,8 @@ export const HomeContainer = styled.div`
           background: url(${ProfilePic});
           background-repeat: no-repeat;
           background-size: cover;
+          background-position: center center;
           border-radius: 50%;
-          image-rendering: pixelated;
         }
       }
       p {
@@ -91,22 +93,33 @@ export const HomeContainer = styled.div`
 
       .desktop-share {
         display: none;
+        transform: rotateY(180deg);
       }
 
-      .desktop-share,
-      .mobile-share {
+      svg {
         align-self: flex-start;
         cursor: pointer;
         position: absolute;
-        top: 3px;
-        left: 20px;
+        top: 9px;
+        left: 9px;
         transform: translate(-50%, 50%);
+        color: #98a2b3;
       }
 
       .mobile-share {
-        top: 15px;
+        top: 4px;
+        left: 19px;
       }
 
+      &:hover {
+        background: #f9fafb;
+        border: 1px dashed #d0d5dd;
+        border-radius: 20px;
+
+        svg {
+          color: #667085;
+        }
+      }
       &:focus {
         outline: none;
         background: #ffffff;
@@ -181,10 +194,10 @@ export const HomeContainer = styled.div`
 
   footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    gap: 10px;
+    gap: 1rem;
     margin-top: 20px;
     padding-bottom: 28px;
     img {
@@ -221,6 +234,11 @@ export const HomeContainer = styled.div`
         top: 5px;
         transition: opacity 0.5s ease-in-out;
       }
+    }
+
+    footer {
+      justify-content: space-between;
+      padding-bottom: 32px;
     }
   }
 `;
