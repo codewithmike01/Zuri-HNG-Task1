@@ -4,8 +4,7 @@ import Slack from '../../assests/images/slack.svg';
 import Github from '../../assests/images/github.svg';
 import ZuriLogo from '../../assests/images/zuri-logo.svg';
 import IngressiveLogo from '../../assests/images/ingressive-logo.svg';
-import MobileShare from '../../assests/images/mobile-share-button.svg';
-import DesktopShare from '../../assests/images/share-button.svg';
+import { BiShare, BiDotsHorizontalRounded } from 'react-icons/bi';
 import ToolTip from '../../assests/images/Tooltip.svg';
 import Camera from '../../assests/images/camera.svg';
 
@@ -46,17 +45,16 @@ const Home = () => {
           onMouseLeave={() => setShowToolTip(false)}
           tabindex="0"
         >
-          <img src={MobileShare} alt="Share icon" className="mobile-share" />
-
-          <img
-            src={DesktopShare}
-            alt="Desktop Share icon"
-            className="desktop-share"
-          />
+          <BiDotsHorizontalRounded className="mobile-share" />
+          <BiShare className="desktop-share" />
         </div>
       </div>
       <div className="links">
-        <a href="none" target="_blank">
+        <a
+          href="https://twitter.com/michotall95"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Twitter Link
         </a>
         <a
@@ -105,7 +103,11 @@ const Home = () => {
         <a href="none" target="_blank">
           <img src={Slack} alt="Slack logo" />
         </a>
-        <a href="none" target="_blank">
+        <a
+          href="https://github.com/Ginohmk"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img src={Github} alt="Github logo" />
         </a>
       </div>
