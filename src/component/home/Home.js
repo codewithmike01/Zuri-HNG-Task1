@@ -74,7 +74,7 @@ const Home = () => {
           Zuri Books
         </a>
         <a
-          href="https://books.zuri.team/python-for-beginners?ref_id=<yourslackname>"
+          href="https://books.zuri.team/python-for-beginners?ref_id=MikeKanu"
           rel="noopener noreferrer"
           target="_blank"
           id="book__python"
