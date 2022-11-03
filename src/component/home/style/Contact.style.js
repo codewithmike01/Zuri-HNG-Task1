@@ -23,50 +23,78 @@ export const ContactConatiner = styled.div`
   }
 
   .formContainer {
-    .username {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      .input-container {
-        input {
-          width: 348px;
-        }
-      }
-    }
-
-    .input-container {
+    form {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 0.375rem;
-
-      label {
-        font-size: 0.7rem;
-        font-weight: 500;
-        line-height: 20px;
-        color: #344054;
+      gap: 1.5rem;
+      .username {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 100%;
+        .input-container {
+          width: 100%;
+          input {
+            width: 100%;
+          }
+        }
       }
 
-      input {
-        border: 1px solid #d0d5dd;
-        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-        border-radius: 8px;
-        background: #ffffff;
-        padding: 10px 14px;
-        width: 398px;
-        height: 44px;
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.375rem;
 
-        &:focus {
-          outline: none;
-          border: 1px solid #84caff;
+        label {
+          font-size: 0.7rem;
+          font-weight: 500;
+          line-height: 20px;
+          color: #344054;
+          font-weight: 500;
         }
 
-        &::placeholder {
-          color: #667085;
-          font-weight: 400;
-          font-size: 1rem;
-          line-height: 24px;
+        input {
+          border: 1px solid #d0d5dd;
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          border-radius: 8px;
+          background: #ffffff;
+          padding: 10px 14px;
+
+          width: 100%;
+          height: 44px;
+
+          &:focus {
+            outline: none;
+            border: 1px solid #84caff;
+          }
+
+          &::placeholder {
+            color: #667085;
+            font-weight: 400;
+            font-size: 0.7rem;
+            line-height: 24px;
+          }
+        }
+      }
+
+      .textarea-container {
+        width: 100%;
+
+        textarea {
+          width: 100%;
+          height: 132px;
+          background: #ffffff;
+          border: 1px solid #d0d5dd;
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          border-radius: 8px;
+          padding: 12px 14px;
+
+          &:focus {
+            outline: none;
+            border: 1px solid #84caff;
+          }
         }
       }
     }
