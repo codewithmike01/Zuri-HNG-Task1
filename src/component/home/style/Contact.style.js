@@ -97,6 +97,21 @@ export const ContactConatiner = styled.div`
           }
         }
       }
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.75rem;
+
+        .agreement {
+          font-size: 0.8rem;
+          color: #475467;
+          font-weight: 400;
+
+          line-height: 24px;
+        }
+      }
     }
   }
 `;

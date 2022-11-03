@@ -31,6 +31,14 @@ const Contact = () => {
             <label>Message</label>
             <textarea placeholder="Send me a message and I'll reply you as soon as possible..." />
           </div>
+
+          <div className="checkbox">
+            <input type="checkbox" name="agreement" className="check" />
+            <p className="agreement">
+              You agree to providing your data to &#123;name&#125; who may
+              contact you.
+            </p>
+          </div>
         </form>
       </div>
     </ContactConatiner>
