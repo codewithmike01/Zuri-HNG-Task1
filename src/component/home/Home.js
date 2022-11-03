@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HomeContainer } from './style/Home.style';
 import Slack from '../../assests/images/slack.svg';
 import Github from '../../assests/images/github.svg';
@@ -22,7 +23,7 @@ const Home = () => {
             typeof="button"
             onMouseEnter={() => setShowCamera(true)}
             onMouseLeave={() => setShowCamera(false)}
-            tabindex="0"
+            tabIndex="0"
             id="profile__img"
           >
             <img src={Camera} alt="Camera icon" className="icon" />
@@ -43,7 +44,7 @@ const Home = () => {
           typeof="button"
           onMouseEnter={() => setShowToolTip(true)}
           onMouseLeave={() => setShowToolTip(false)}
-          tabindex="0"
+          tabIndex="0"
         >
           <BiDotsHorizontalRounded className="mobile-share" />
           <BiShare className="desktop-share" />
@@ -97,6 +98,10 @@ const Home = () => {
         >
           Design Books
         </a>
+        <Link to="/contact" id="contact">
+          {' '}
+          Contact Me
+        </Link>
       </div>
 
       <div className="social-links">
