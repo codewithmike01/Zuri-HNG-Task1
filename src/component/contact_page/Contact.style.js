@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Checked from '../../assests/images/check.svg';
 
 export const ContactContainer = styled.div`
   width: 80%;
@@ -107,19 +108,105 @@ export const ContactContainer = styled.div`
 
         .checkbox {
           display: flex;
-          gap: 0.75rem;
+          gap: 2rem;
           align-items: flex-start;
+          position: relative;
+
+          /* Container */
 
           .check {
-            margin-top: -1.5px;
+            position: relative;
 
             input {
-              &:checked {
-                color: green;
-                background-color: red;
-              }
+              width: 20px;
+              height: 20px;
+              background: #ffffff;
+              border: 1px solid #d0d5dd;
+              border-radius: 6px;
+            }
+
+            input::before {
+              position: relative;
+              display: block;
+              /* display: none; */
+              width: 20px;
+              height: 20px;
+              border: 1px solid #808080;
+              content: '';
+              background: #fff;
+            }
+
+            input:after {
+              cursor: pointer;
+              position: absolute;
+              display: block;
+              left: -1px;
+              top: -1px;
+              width: 25px;
+              height: 25px;
+              background: #ffffff;
+              border: 1px solid #d0d5dd;
+              border-radius: 6px;
+              content: '';
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+
+            input:checked:after {
+              background-image: url(${Checked});
+              background-repeat: no-repeat;
+              background-position: center;
+              border: 1px solid #1570ef;
+            }
+
+            input:not(:checked):focus::after {
+              box-shadow: none;
+            }
+
+            /* Focus */
+            input:not(:checked):focus:after {
+              background: #ffffff;
+              border: 1px solid #84caff;
+              box-shadow: 0px 0px 0px 4px #d1e9ff;
+              border-radius: 6px;
+            }
+
+            input:not(:disabled):checked:focus:after {
+              border: 1px solid #84caff;
+              border-radius: 6px;
+              background-image: url(${Checked});
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+
+            /* Disabled */
+            input:disabled:after {
+              border: 1px solid #d0d5dd;
+              border-radius: 6px;
+              background: #f2f4f7;
+            }
+
+            /* input:not(:disabled):checked:hover:after {
+              background-image: url(${Checked});
+              background-repeat: no-repeat;
+              background-position: center;
+            } */
+
+            /* Hover */
+            /* input:not(:disabled):hover:after {
+              cursor: pointer;
+              background: #ffffff;
+              border: 1px solid #84caff;
+              box-shadow: 0px 0px 0px 4px #d1e9ff;
+              border-radius: 6px;
+            } */
+
+            input:not(:disabled):hover:before {
+              border-color: #3d7591;
             }
           }
+
+          /* End */
 
           .agreement {
             font-size: 0.8rem;
