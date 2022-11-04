@@ -23,7 +23,7 @@ export const ContactContainer = styled.div`
 
     p {
       color: #475467;
-      font-size: 1rem;
+      font-size: 0.9rem;
       line-height: 30px;
       font-weight: 400;
       margin-bottom: 3rem;
@@ -112,6 +112,13 @@ export const ContactContainer = styled.div`
 
           .check {
             margin-top: -1.5px;
+
+            input {
+              &:checked {
+                color: green;
+                background-color: red;
+              }
+            }
           }
 
           .agreement {
@@ -141,6 +148,16 @@ export const ContactContainer = styled.div`
             cursor: pointer;
             font-size: 1rem;
           }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .formContainer {
+      form {
+        .username {
+          flex-direction: column;
         }
       }
     }

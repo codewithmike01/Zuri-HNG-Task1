@@ -25,6 +25,14 @@ export const FooterContainer = styled.div`
     }
   }
 
+  @media screen and (max-width: 375px) {
+    .main {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.3rem;
+    }
+  }
+
   @media screen and (min-width: 990px) {
     footer {
       .main {
