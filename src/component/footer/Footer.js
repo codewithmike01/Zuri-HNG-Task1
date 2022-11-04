@@ -5,11 +5,16 @@ import IngressiveLogo from '../../assests/images/ingressive-logo.svg';
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      <img src={ZuriLogo} alt="Zuri logo" />
-      <p>HNG Intership 9 Frontend Task</p>
-      <img src={IngressiveLogo} alt="Ingressive logo" />
-    </FooterContainer>
+    <>
+      <FooterContainer>
+        <hr />
+        <div className="main">
+          <img src={ZuriLogo} alt="Zuri logo" />
+          <p>HNG Intership 9 Frontend Task</p>
+          <img src={IngressiveLogo} alt="Ingressive logo" />
+        </div>
+      </FooterContainer>
+    </>
   );
 };
 

@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-export const ContactConatiner = styled.div`
+export const ContactContainer = styled.div`
   width: 80%;
   max-width: 1152px;
   margin: 0 auto;
   padding-top: 4rem;
+  margin-bottom: 11.75rem;
 
   h2 {
     color: #101828;

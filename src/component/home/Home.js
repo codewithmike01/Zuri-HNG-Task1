@@ -114,7 +114,6 @@ const Home = () => {
           <img src={Github} alt="Github logo" />
         </a>
       </div>
-      <hr />
     </HomeContainer>
   );
 };

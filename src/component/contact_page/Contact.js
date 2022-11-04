@@ -1,9 +1,9 @@
 import React from 'react';
-import { ContactConatiner } from './Contact.style';
+import { ContactContainer } from './Contact.style';
 
 const Contact = () => {
   return (
-    <ContactConatiner>
+    <ContactContainer>
       <h2>Contact Me</h2>
 
       <p>Hi there, contact me to ask me about anything you have in mind.</p>
@@ -60,7 +60,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-    </ContactConatiner>
+    </ContactContainer>
   );
 };
 
