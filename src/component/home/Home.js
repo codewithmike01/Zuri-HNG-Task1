@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HomeContainer } from './style/Home.style';
+import { HomeContainer } from './Home.style';
 import Slack from '../../assests/images/slack.svg';
 import Github from '../../assests/images/github.svg';
-import ZuriLogo from '../../assests/images/zuri-logo.svg';
-import IngressiveLogo from '../../assests/images/ingressive-logo.svg';
 import { BiShare, BiDotsHorizontalRounded } from 'react-icons/bi';
 import ToolTip from '../../assests/images/Tooltip.svg';
 import Camera from '../../assests/images/camera.svg';
@@ -117,11 +115,6 @@ const Home = () => {
         </a>
       </div>
       <hr />
-      <footer>
-        <img src={ZuriLogo} alt="Zuri logo" />
-        <p>HNG Intership 9 Frontend Task</p>
-        <img src={IngressiveLogo} alt="Ingressive logo" />
-      </footer>
     </HomeContainer>
   );
 };

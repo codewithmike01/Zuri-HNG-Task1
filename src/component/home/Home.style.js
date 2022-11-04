@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ProfilePic from '../../../assests/images/profile-img.png';
+import ProfilePic from '../../assests/images/profile-img.png';
 
 export const HomeContainer = styled.div`
   width: 90%;
@@ -192,25 +192,6 @@ export const HomeContainer = styled.div`
     gap: 26.25px;
   }
 
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-    gap: 1rem;
-    margin-top: 20px;
-    padding-bottom: 28px;
-    img {
-      width: 132.13px;
-      height: 32px;
-    }
-    p {
-      font-size: 0.7rem;
-      line-height: 24px;
-      color: #667085;
-    }
-  }
-
   @media screen and (min-width: 990px) {
     .profile-containter {
       width: 70%;
@@ -234,11 +215,6 @@ export const HomeContainer = styled.div`
         top: 5px;
         transition: opacity 0.5s ease-in-out;
       }
-    }
-
-    footer {
-      justify-content: space-between;
-      padding-bottom: 32px;
     }
   }
 `;

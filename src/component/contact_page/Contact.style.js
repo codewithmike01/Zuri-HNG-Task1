@@ -16,7 +16,7 @@ export const ContactConatiner = styled.div`
 
   p {
     color: #475467;
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 30px;
     font-weight: 400;
     margin-bottom: 3rem;
@@ -100,16 +100,39 @@ export const ContactConatiner = styled.div`
 
       .checkbox {
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
         gap: 0.75rem;
+        align-items: flex-start;
+
+        .check {
+          margin-top: -1.5px;
+        }
 
         .agreement {
           font-size: 0.8rem;
           color: #475467;
           font-weight: 400;
-
           line-height: 24px;
+        }
+      }
+      .btn-container {
+        width: 100%;
+        height: 48px;
+        .btn {
+          border: none;
+          color: #fff;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 12px 20px;
+          gap: 8px;
+          width: 100%;
+          background: #1570ef;
+          background: #1570ef;
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 1rem;
         }
       }
     }
