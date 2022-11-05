@@ -14,7 +14,7 @@ const Contact = () => {
   // Scroll to top on render
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
   // Handle show error
   const showErr = (errVal) => {
     for (const el of errVal) {
