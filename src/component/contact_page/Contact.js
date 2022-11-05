@@ -39,6 +39,7 @@ const Contact = () => {
   // Handle Event Submit
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const formData = {
       firstName: firstName.value,
       lastName: lastName.value,
@@ -88,10 +89,10 @@ const Contact = () => {
                   }
                   className={lastName.err ? 'border-err' : ''}
                 />
+                {lastName.err && (
+                  <span className="error-msg">Please enter last name</span>
+                )}
               </div>
-              {lastName.err && (
-                <span className="error-msg">Please enter last name</span>
-              )}
             </div>
 
             <div className="input-container">
@@ -136,8 +137,8 @@ const Contact = () => {
                     value={check.value}
                     onChange={(e) => {
                       setCheck((prevState) => ({
-                        ...check,
-                        value: !prevState,
+                        err: false,
+                        value: !prevState.value,
                       }));
                     }}
                     className={check.err ? 'check-err' : ''}
@@ -149,7 +150,7 @@ const Contact = () => {
                 </p>
               </div>
               {check.err && (
-                <span className="error-msg">Please enter check the box</span>
+                <span className="error-msg">Please check the box</span>
               )}
             </div>
 
