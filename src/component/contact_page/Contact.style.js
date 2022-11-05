@@ -76,6 +76,8 @@ export const ContactContainer = styled.div`
             &:focus {
               outline: none;
               border: 1px solid #84caff;
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+              border-radius: 8px;
             }
 
             &::placeholder {
@@ -108,118 +110,114 @@ export const ContactContainer = styled.div`
 
         .checkbox {
           display: flex;
-          gap: 2rem;
+          flex-direction: column;
+          gap: 1.5rem;
           align-items: flex-start;
           position: relative;
+          margin-bottom: 2rem;
 
-          /* Container */
+          /* Check Wrapper  */
+          .checkbox-wrapper {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
 
-          .check {
-            position: relative;
-
-            input {
-              width: 20px;
-              height: 20px;
-              background: #ffffff;
-              border: 1px solid #d0d5dd;
-              border-radius: 6px;
-            }
-
-            input::before {
+            /* Check main container */
+            .check {
               position: relative;
-              display: block;
-              /* display: none; */
-              width: 20px;
-              height: 20px;
-              border: 1px solid #808080;
-              content: '';
-              background: #fff;
+
+              input {
+                width: 20px;
+                height: 20px;
+                background: #ffffff;
+                border: 1px solid #d0d5dd;
+                border-radius: 6px;
+              }
+
+              input::before {
+                position: relative;
+                display: block;
+                /* display: none; */
+                width: 20px;
+                height: 20px;
+                border: 1px solid #808080;
+                content: '';
+                background: #fff;
+              }
+
+              input:after {
+                cursor: pointer;
+                position: absolute;
+                display: block;
+                left: -1px;
+                top: -1px;
+                width: 25px;
+                height: 25px;
+                background: #ffffff;
+                border: 1px solid #d0d5dd;
+                border-radius: 6px;
+                content: '';
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+
+              input:checked:after {
+                background-image: url(${Checked});
+                background-repeat: no-repeat;
+                background-position: center;
+                border: 1px solid #1570ef;
+              }
+
+              input:not(:checked):focus::after {
+                box-shadow: none;
+              }
+
+              /* Focus */
+              input:not(:checked):focus:after {
+                background: #ffffff;
+                border: 1px solid #84caff;
+                box-shadow: 0px 0px 0px 4px #d1e9ff;
+                border-radius: 6px;
+              }
+
+              input:not(:disabled):checked:focus:after {
+                border: 1px solid #84caff;
+                border-radius: 6px;
+                background-image: url(${Checked});
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+
+              /* Disabled */
+              input:disabled:after {
+                border: 1px solid #d0d5dd;
+                border-radius: 6px;
+                background: #f2f4f7;
+              }
+
+              input:not(:disabled):hover:before {
+                background: #f2f4f7;
+                border: 1px solid #d0d5dd;
+                border-radius: 6px;
+              }
             }
+            /* End */
 
-            input:after {
-              cursor: pointer;
-              position: absolute;
-              display: block;
-              left: -1px;
-              top: -1px;
-              width: 25px;
-              height: 25px;
-              background: #ffffff;
-              border: 1px solid #d0d5dd;
-              border-radius: 6px;
-              content: '';
-              background-repeat: no-repeat;
-              background-position: center;
+            .agreement {
+              font-size: 0.8rem;
+              color: #475467;
+              font-weight: 400;
+              line-height: 24px;
+              margin-top: -2px;
+              margin-bottom: -0.7rem;
             }
-
-            input:checked:after {
-              background-image: url(${Checked});
-              background-repeat: no-repeat;
-              background-position: center;
-              border: 1px solid #1570ef;
-            }
-
-            input:not(:checked):focus::after {
-              box-shadow: none;
-            }
-
-            /* Focus */
-            input:not(:checked):focus:after {
-              background: #ffffff;
-              border: 1px solid #84caff;
-              box-shadow: 0px 0px 0px 4px #d1e9ff;
-              border-radius: 6px;
-            }
-
-            input:not(:disabled):checked:focus:after {
-              border: 1px solid #84caff;
-              border-radius: 6px;
-              background-image: url(${Checked});
-              background-repeat: no-repeat;
-              background-position: center;
-            }
-
-            /* Disabled */
-            input:disabled:after {
-              border: 1px solid #d0d5dd;
-              border-radius: 6px;
-              background: #f2f4f7;
-            }
-
-            /* input:not(:disabled):checked:hover:after {
-              background-image: url(${Checked});
-              background-repeat: no-repeat;
-              background-position: center;
-            } */
-
-            /* Hover */
-            /* input:not(:disabled):hover:after {
-              cursor: pointer;
-              background: #ffffff;
-              border: 1px solid #84caff;
-              box-shadow: 0px 0px 0px 4px #d1e9ff;
-              border-radius: 6px;
-            } */
-
-            input:not(:disabled):hover:before {
-              border-color: #3d7591;
-            }
-          }
-
-          /* End */
-
-          .agreement {
-            font-size: 0.8rem;
-            color: #475467;
-            font-weight: 400;
-            line-height: 24px;
           }
         }
         .btn-container {
           width: 100%;
           height: 48px;
           .btn {
-            border: none;
+            border: 1px solid transparent;
             color: #fff;
             display: flex;
             flex-direction: row;
@@ -229,11 +227,85 @@ export const ContactContainer = styled.div`
             gap: 8px;
             width: 100%;
             background: #1570ef;
-            background: #1570ef;
             box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
             border-radius: 8px;
             cursor: pointer;
             font-size: 1rem;
+
+            &:hover {
+              background: #175cd3;
+              border: 1px solid #175cd3;
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+              border-radius: 8px;
+              cursor: pointer;
+              font-size: 1rem;
+              width: 100%;
+            }
+
+            &:focus {
+              outline: none;
+              border: 1px solid #1570ef;
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05),
+                0px 0px 0px 4px #d1e9ff;
+            }
+
+            &:disabled {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 12px 20px;
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+              border-radius: 8px;
+              border: 1px solid #b2ddff;
+              background: #b2ddff;
+            }
+          }
+        }
+
+        /* GENERAL FORM STYLE ERROR */
+
+        .error-msg {
+          color: #f83f23;
+          font-weight: 400;
+          font-size: 0.76rem;
+          line-height: 20px;
+        }
+
+        .textarea-container,
+        .input-container {
+          .border-err {
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+            border: 1px solid #f89687;
+
+            &:focus {
+              border: 1px solid #f89687;
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05),
+                0px 0px 0px 4px #ffd3cc;
+              border-radius: 8px;
+            }
+          }
+        }
+
+        .checkbox {
+          .checkbox-wrapper {
+            .check {
+              .check-err::after {
+                top: -2px;
+                left: -2px;
+                border: 1px solid #f89687;
+                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                border-radius: 8px;
+              }
+              /* Focus */
+              .check-err:not(:checked):focus:after {
+                border: 1px solid #f89687;
+                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05),
+                  0px 0px 0px 4px #ffd3cc;
+                border-radius: 8px;
+              }
+            }
           }
         }
       }
