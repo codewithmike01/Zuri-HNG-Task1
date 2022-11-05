@@ -149,7 +149,7 @@ const Contact = () => {
                   />
                 </div>
                 <p className="agreement">
-                  You agree to providing your data to &#123;name&#125; who may
+                  You agree to providing your data to Kanu Mike Chibundu who may
                   contact you.
                 </p>
               </div>
