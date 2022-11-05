@@ -2,6 +2,10 @@
 
 This project showcases a basic webpage with frontend techonology (React). It includes Profile section and Link section, which shows the user profile information and Links to digital things they can sell respectively.
 
+### Live Link
+
+[Live Link][https://zuri-hng-task1.vercel.app/]
+
 ## Getting Started
 
 ### Installing Dependecies
@@ -61,3 +65,5 @@ Give a ⭐️ if you like this project!
 
 [This project is [MIT](https://github.com/Ginohmk/Zuri-HNG-Task1/blob/dev/LICENSE) licensed.
 ..
+
+[https://zuri-hng-task1.vercel.app/]: https://zuri-hng-task1.vercel.app/
