@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ContactContainer } from './Contact.style';
 import { formValidation } from './service';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,10 @@ const Contact = () => {
   const [textarea, setTextarea] = useState({ value: '', err: false });
   const [check, setCheck] = useState({ value: false, err: false });
 
+  // Scroll to top on render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   // Handle show error
   const showErr = (errVal) => {
     for (const el of errVal) {
